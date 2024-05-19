@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HomePage-20240508143840" tests="8" file=".py" time="48.108" timestamp="2024-05-08T14:39:39" failures="0" errors="0" skipped="0">
+	<testcase classname="HomePage" name="test_TC_01_home_screen" time="0.677" timestamp="2024-05-08T14:38:51" file="TestCase\xml\homepage_test.py" line="18">
+		<system-out><![CDATA[TC_01 Home Page
+
+Classname : HomePage
+Running Test Method : test_TC_01_home_screen
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_02_search" time="2.883" timestamp="2024-05-08T14:38:54" file="TestCase\xml\homepage_test.py" line="23">
+		<system-out><![CDATA[TC_02 Button Search
+
+Classname : HomePage
+Running Test Method : test_TC_02_search
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_03_shop" time="3.139" timestamp="2024-05-08T14:38:57" file="TestCase\xml\homepage_test.py" line="30">
+		<system-out><![CDATA[TC_03 Button Shop
+
+Classname : HomePage
+Running Test Method : test_TC_03_shop
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_04_my_account" time="3.833" timestamp="2024-05-08T14:39:01" file="TestCase\xml\homepage_test.py" line="37">
+		<system-out><![CDATA[TC_04 Button My Account
+
+Classname : HomePage
+Running Test Method : test_TC_04_my_account
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_05_testcases" time="3.314" timestamp="2024-05-08T14:39:05" file="TestCase\xml\homepage_test.py" line="44">
+		<system-out><![CDATA[TC_05 Button Test Cases
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_06_AT_Site" time="26.165" timestamp="2024-05-08T14:39:31" file="TestCase\xml\homepage_test.py" line="49">
+		<system-out><![CDATA[TC_06 Button AT Site
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_07_Demo_Site" time="4.999" timestamp="2024-05-08T14:39:36" file="TestCase\xml\homepage_test.py" line="54">
+		<system-out><![CDATA[TC_07 Button Demo Site
+]]></system-out>
+	</testcase>
+	<testcase classname="HomePage" name="test_TC_08_icon_shopping" time="3.098" timestamp="2024-05-08T14:39:39" file="TestCase\xml\homepage_test.py" line="59">
+		<system-out><![CDATA[TC_08 Button icon Shopping
+]]></system-out>
+	</testcase>
+</testsuite>

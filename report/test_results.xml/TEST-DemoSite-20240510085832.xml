@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DemoSite-20240510085832" tests="6" file=".py" time="58.647" timestamp="2024-05-10T08:59:41" failures="0" errors="0" skipped="0">
+	<testcase classname="DemoSite" name="test_TC1_Photo_Upload_Images" time="5.949" timestamp="2024-05-10T08:58:48" file="TestCase\xml\site_xml.py" line="28">
+		<system-out><![CDATA[TC_01 Photo Upload Images
+]]></system-out>
+	</testcase>
+	<testcase classname="DemoSite" name="test_TC2_Drag_and_Drop" time="11.015" timestamp="2024-05-10T08:58:59" file="TestCase\xml\site_xml.py" line="36">
+		<system-out><![CDATA[TC_02 Button Interactions with Drag and Drop
+]]></system-out>
+	</testcase>
+	<testcase classname="DemoSite" name="test_TC3_SummerNote" time="7.996" timestamp="2024-05-10T08:59:07" file="TestCase\xml\site_xml.py" line="64">
+		<system-out><![CDATA[TC_03 Button WYSIWYG with SummerNote
+]]></system-out>
+	</testcase>
+	<testcase classname="DemoSite" name="test_TC4_Dynamic_Data" time="9.875" timestamp="2024-05-10T08:59:17" file="TestCase\xml\site_xml.py" line="99">
+		<system-out><![CDATA[TC_04 Button More with Dynamic Data
+]]></system-out>
+	</testcase>
+	<testcase classname="DemoSite" name="test_TC5_File_Download" time="17.238" timestamp="2024-05-10T08:59:34" file="TestCase\xml\site_xml.py" line="112">
+		<system-out><![CDATA[TC_05 Button More with File Download
+]]></system-out>
+	</testcase>
+	<testcase classname="DemoSite" name="test_TC6_File_Upload" time="6.574" timestamp="2024-05-10T08:59:41" file="TestCase\xml\site_xml.py" line="139">
+		<system-out><![CDATA[TC_06 Button More with File Upload
+]]></system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TEST REPORT</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 90%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+    font-size: 20pt;
+    color:#007ba7;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+    padding-left: 80px
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    /*padding: 10px; */
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 9.5pt;
+    /*width: 500px;*/
+}
+
+
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 4ex;
+}
+#result_table {
+    width: 75%;
+    height: 200px;
+    border-collapse: collapse;
+    border: 1px solid #1b3c7e;
+}
+#header_row {
+    font-weight: bold;
+    color: black;
+    background-color: #FFFF99;
+}
+#result_table td {
+    border: 1px solid #000;
+    padding: 2px;
+    padding-left: 30px
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #32cd32; }
+.failClass  { background-color: #FFCC00; }
+.errorClass { background-color: #FF797C; }
+.passCase   { color: #32cd32; }
+.failCase   { color: #FFCC00; font-weight: bold; }
+.errorCase  { color: #FF797C; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: -1.5em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+</script>
+
+<div class='heading'>
+<h1>TEST REPORT</h1>
+<p class='attribute'><strong>Start Time:</strong> 2024-05-10 15:00:12</p>
+<p class='attribute'><strong>Duration:</strong> 0:07:03.746465</p>
+<p class='attribute'><strong>Status:</strong> Pass 5 Failure 10</p>
+
+<p class='description'>This is a website test report</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.test.order_test.TestShoppingOrder</td>
+    <td>7</td>
+    <td>2</td>
+    <td>5</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',7)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TC1_Successful_Order_the_correct</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: Pass: Shopping Order successful.
+TC_01 Successful Shopping Order with the correct full enter
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TC2_Successful_Order_item_blank</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: TC_02 Successful Shopping Order with leave the item blank optional
+Pass: Shopping Order successful.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC3_Failed_Order_invalid_ZIP</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        fail</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: TC_03 Shopping Order failed with invalid Postcode/ZIP
+Error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B0941562+60802]
+	(No symbol) [0x00007FF7B08BAC62]
+	(No symbol) [0x00007FF7B0777CE4]
+	(No symbol) [0x00007FF7B077DE26]
+	(No symbol) [0x00007FF7B07801DB]
+	(No symbol) [0x00007FF7B0780280]
+	(No symbol) [0x00007FF7B07CE769]
+	(No symbol) [0x00007FF7B07CC344]
+	(No symbol) [0x00007FF7B07C980A]
+	(No symbol) [0x00007FF7B07C89E2]
+	(No symbol) [0x00007FF7B07BAE8B]
+	(No symbol) [0x00007FF7B07EAB7A]
+	(No symbol) [0x00007FF7B07BA7C6]
+	(No symbol) [0x00007FF7B07EAD90]
+	(No symbol) [0x00007FF7B080A224]
+	(No symbol) [0x00007FF7B07EA923]
+	(No symbol) [0x00007FF7B07B8FEC]
+	(No symbol) [0x00007FF7B07B9C21]
+	GetHandleVerifier [0x00007FF7B0C441FD+3217949]
+	GetHandleVerifier [0x00007FF7B0C86197+3488183]
+	GetHandleVerifier [0x00007FF7B0C7F11F+3459391]
+	GetHandleVerifier [0x00007FF7B09FB926+823622]
+	(No symbol) [0x00007FF7B08C5FFF]
+	(No symbol) [0x00007FF7B08C0F24]
+	(No symbol) [0x00007FF7B08C10B2]
+	(No symbol) [0x00007FF7B08B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 107, in check_payment
+    self.driver.find_element(By.XPATH, '//*[@id="payment_method_ppec_paypal"]').click() #PayPal 4
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B0941562+60802]
+	(No symbol) [0x00007FF7B08BAC62]
+	(No symbol) [0x00007FF7B0777CE4]
+	(No symbol) [0x00007FF7B077DE26]
+	(No symbol) [0x00007FF7B07801DB]
+	(No symbol) [0x00007FF7B0780280]
+	(No symbol) [0x00007FF7B07CE769]
+	(No symbol) [0x00007FF7B07CC344]
+	(No symbol) [0x00007FF7B07C980A]
+	(No symbol) [0x00007FF7B07C89E2]
+	(No symbol) [0x00007FF7B07BAE8B]
+	(No symbol) [0x00007FF7B07EAB7A]
+	(No symbol) [0x00007FF7B07BA7C6]
+	(No symbol) [0x00007FF7B07EAD90]
+	(No symbol) [0x00007FF7B080A224]
+	(No symbol) [0x00007FF7B07EA923]
+	(No symbol) [0x00007FF7B07B8FEC]
+	(No symbol) [0x00007FF7B07B9C21]
+	GetHandleVerifier [0x00007FF7B0C441FD+3217949]
+	GetHandleVerifier [0x00007FF7B0C86197+3488183]
+	GetHandleVerifier [0x00007FF7B0C7F11F+3459391]
+	GetHandleVerifier [0x00007FF7B09FB926+823622]
+	(No symbol) [0x00007FF7B08C5FFF]
+	(No symbol) [0x00007FF7B08C0F24]
+	(No symbol) [0x00007FF7B08C10B2]
+	(No symbol) [0x00007FF7B08B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 161, in test_TC3_Failed_Order_invalid_ZIP
+    result = self.check_payment()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\order_test.py", line 122, in check_payment
+    self.fail("An error occurred during Shopping Order.")
+AssertionError: An error occurred during Shopping Order.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC4_Failed_empty_Fristname_Lastname</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        fail</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: TC_04 Shopping Order failed with Empty First Name, Last Name
+Fail: Shopping Order failed.
+Error: Shopping Order failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 95, in check_billing
+    self.fail("Shopping Order failed.")
+AssertionError: Shopping Order failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 177, in test_TC4_Failed_empty_Fristname_Lastname
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\order_test.py", line 98, in check_billing
+    self.fail("An error occurred during Shopping Order.")
+AssertionError: An error occurred during Shopping Order.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC5_Failed_Order_invalid_email</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        fail</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.5: TC_05 Shopping Order failed with invalid email
+Fail: Shopping Order failed.
+Error: Shopping Order failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 95, in check_billing
+    self.fail("Shopping Order failed.")
+AssertionError: Shopping Order failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 193, in test_TC5_Failed_Order_invalid_email
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\order_test.py", line 98, in check_billing
+    self.fail("An error occurred during Shopping Order.")
+AssertionError: An error occurred during Shopping Order.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC6_Failed_Order_invalid_Phone</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+        fail</a>
+
+    <div id='div_ft1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.6: TC_06 Shopping Order failed with invalid Phone
+Fail: Shopping Order failed.
+Error: Shopping Order failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 95, in check_billing
+    self.fail("Shopping Order failed.")
+AssertionError: Shopping Order failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 209, in test_TC6_Failed_Order_invalid_Phone
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\order_test.py", line 98, in check_billing
+    self.fail("An error occurred during Shopping Order.")
+AssertionError: An error occurred during Shopping Order.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC7_Failed_empty_Address_City</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        fail</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: TC_07 Add Shipping Address failed with empty Address, empty Town/City
+Fail: Shopping Order failed.
+Error: Shopping Order failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 95, in check_billing
+    self.fail("Shopping Order failed.")
+AssertionError: Shopping Order failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\order_test.py", line 225, in test_TC7_Failed_empty_Address_City
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\order_test.py", line 98, in check_billing
+    self.fail("An error occurred during Shopping Order.")
+AssertionError: An error occurred during Shopping Order.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestCase.test.address_test.TestAddress</td>
+    <td>8</td>
+    <td>3</td>
+    <td>5</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',8)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TC1_Successful_Billing_the_corrent</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: TC_01 Successful Add Billing Address with the correct full enter
+Pass: Billing Address successful.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TC2_Success_Billing_item_blank</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: TC_02 Successful Add Billing Address with leave the item blank optional
+Pass: Billing Address successful.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC3_FailBilling_empty_FirstLastname</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        fail</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: TC_03 Add Billing Address failed with empty First name, empty Last name
+Fail: Billing Address failed.
+Error: Billing Address failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 69, in check_billing
+    self.fail("Billing Address failed.")
+AssertionError: Billing Address failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 162, in test_TC3_FailBilling_empty_FirstLastname
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\address_test.py", line 72, in check_billing
+    self.fail("An error occurred during Billing Address.")
+AssertionError: An error occurred during Billing Address.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC4_FailBilling_empty_PhoneCity</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+        fail</a>
+
+    <div id='div_ft2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.4: TC_04 Add Billing Address failed with empty Town/City, empty Phone
+Fail: Billing Address failed.
+Error: Billing Address failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 69, in check_billing
+    self.fail("Billing Address failed.")
+AssertionError: Billing Address failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 177, in test_TC4_FailBilling_empty_PhoneCity
+    result = self.check_billing(billing_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\address_test.py", line 72, in check_billing
+    self.fail("An error occurred during Billing Address.")
+AssertionError: An error occurred during Billing Address.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TC5_Successful_Shipping_the_correct</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.5')" >
+        pass</a>
+
+    <div id='div_pt2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.5: TC_05 Successful Add Shipping Address with the correct full enter
+Pass: shipping Address successful.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC6_FailShipping_empty_FirstLastname</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
+        fail</a>
+
+    <div id='div_ft2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.6: TC_06 Add Shipping Address failed with empty First name, empty Last name
+Fail: shipping Address failed.
+Error: Billing Address failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 115, in check_shipping
+    self.fail("Billing Address failed.")
+AssertionError: Billing Address failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 203, in test_TC6_FailShipping_empty_FirstLastname
+    result = self.check_shipping(shipping_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\address_test.py", line 118, in check_shipping
+    self.fail("An error occurred during Billing Address.")
+AssertionError: An error occurred during Billing Address.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC7_FailShipping_empty_AddressCity</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.7')" >
+        fail</a>
+
+    <div id='div_ft2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.7: TC_07 Add Shipping Address failed with empty Address, empty Town/City
+Fail: shipping Address failed.
+Error: Billing Address failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 115, in check_shipping
+    self.fail("Billing Address failed.")
+AssertionError: Billing Address failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 216, in test_TC7_FailShipping_empty_AddressCity
+    result = self.check_shipping(shipping_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\address_test.py", line 118, in check_shipping
+    self.fail("An error occurred during Billing Address.")
+AssertionError: An error occurred during Billing Address.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_TC8_FailShipping_invalidZIP</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
+        fail</a>
+
+    <div id='div_ft2.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.8: TC_08 Add Shipping Address failed with invalid Postcode/ZIP
+Fail: shipping Address failed.
+Error: Billing Address failed.
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 115, in check_shipping
+    self.fail("Billing Address failed.")
+AssertionError: Billing Address failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Chuyende\TestCase\test\address_test.py", line 229, in test_TC8_FailShipping_invalidZIP
+    result = self.check_shipping(shipping_info)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Chuyende\TestCase\test\address_test.py", line 118, in check_shipping
+    self.fail("An error occurred during Billing Address.")
+AssertionError: An error occurred during Billing Address.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>15</td>
+    <td>5</td>
+    <td>10</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

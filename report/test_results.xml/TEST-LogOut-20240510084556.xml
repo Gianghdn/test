@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LogOut-20240510084556" tests="1" file=".py" time="18.457" timestamp="2024-05-10T08:46:15" failures="0" errors="0" skipped="0">
+	<testcase classname="LogOut" name="test_login_logout" time="18.457" timestamp="2024-05-10T08:46:15" file="TestCase\xml\logout_xml.py" line="17"/>
+</testsuite>

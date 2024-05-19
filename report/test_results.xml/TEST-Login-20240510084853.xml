@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login-20240510084853" tests="6" file=".py" time="176.801" timestamp="2024-05-10T08:51:58" failures="5" errors="0" skipped="0">
+	<testcase classname="Login" name="test_Successful_Login_with_correct" time="6.296" timestamp="2024-05-10T08:50:56" file="TestCase\xml\login_xml.py" line="52">
+		<system-out><![CDATA[TC_01 Successful Login With the correct email address and password
+Test is passed for login: ('dhuonggiang566@gmail.com', 'Gimas+3006')
+]]></system-out>
+	</testcase>
+	<testcase classname="Login" name="test_Failed_empty_email" time="35.989" timestamp="2024-05-10T08:49:37" file="TestCase\xml\login_xml.py" line="66">
+		<failure type="AssertionError" message="An error occurred during Login."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 43, in check_registration
+    self.fail("Login failed.")
+AssertionError: Login failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 70, in test_Failed_empty_email
+    result = self.check_registration(user, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 48, in check_registration
+    self.fail("An error occurred during Login.")
+AssertionError: An error occurred during Login.
+]]></failure>
+		<system-out><![CDATA[TC_03 Login failed With  empty email address and correct password
+Test is failed for login: ('', 'Giangdinh%456hg')
+Error: Login failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Login" name="test_Failed_empty_email_password" time="36.374" timestamp="2024-05-10T08:50:13" file="TestCase\xml\login_xml.py" line="59">
+		<failure type="AssertionError" message="An error occurred during Login."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 43, in check_registration
+    self.fail("Login failed.")
+AssertionError: Login failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 63, in test_Failed_empty_email_password
+    result = self.check_registration(user, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 48, in check_registration
+    self.fail("An error occurred during Login.")
+AssertionError: An error occurred during Login.
+]]></failure>
+		<system-out><![CDATA[TC_02 Login failed With  empty email address and empty password
+Test is failed for login: ('', '')
+Error: Login failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Login" name="test_Failed_empty_password" time="35.897" timestamp="2024-05-10T08:50:49" file="TestCase\xml\login_xml.py" line="73">
+		<failure type="AssertionError" message="An error occurred during Login."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 43, in check_registration
+    self.fail("Login failed.")
+AssertionError: Login failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 77, in test_Failed_empty_password
+    result = self.check_registration(user, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 48, in check_registration
+    self.fail("An error occurred during Login.")
+AssertionError: An error occurred during Login.
+]]></failure>
+		<system-out><![CDATA[TC_04 Login failed With correct email address and empty password
+Test is failed for login: ('dhuonggiang566@gmail.com', '')
+Error: Login failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Login" name="test_incorrect_email_password" time="31.072" timestamp="2024-05-10T08:51:27" file="TestCase\xml\login_xml.py" line="79">
+		<failure type="AssertionError" message="An error occurred during Login."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 28, in check_registration
+    userid = self.driver.find_element(By.NAME, "username")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="username"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C2741562+60802]
+	(No symbol) [0x00007FF6C26BAC62]
+	(No symbol) [0x00007FF6C2577CE4]
+	(No symbol) [0x00007FF6C25C6D4D]
+	(No symbol) [0x00007FF6C25C6E1C]
+	(No symbol) [0x00007FF6C260CE37]
+	(No symbol) [0x00007FF6C25EABBF]
+	(No symbol) [0x00007FF6C260A224]
+	(No symbol) [0x00007FF6C25EA923]
+	(No symbol) [0x00007FF6C25B8FEC]
+	(No symbol) [0x00007FF6C25B9C21]
+	GetHandleVerifier [0x00007FF6C2A441FD+3217949]
+	GetHandleVerifier [0x00007FF6C2A86197+3488183]
+	GetHandleVerifier [0x00007FF6C2A7F11F+3459391]
+	GetHandleVerifier [0x00007FF6C27FB926+823622]
+	(No symbol) [0x00007FF6C26C5FFF]
+	(No symbol) [0x00007FF6C26C0F24]
+	(No symbol) [0x00007FF6C26C10B2]
+	(No symbol) [0x00007FF6C26B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 83, in test_incorrect_email_password
+    result = self.check_registration(user, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 48, in check_registration
+    self.fail("An error occurred during Login.")
+AssertionError: An error occurred during Login.
+]]></failure>
+		<system-out><![CDATA[TC_05 Login failed With incorrect email address and incorrect password
+Error: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="username"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C2741562+60802]
+	(No symbol) [0x00007FF6C26BAC62]
+	(No symbol) [0x00007FF6C2577CE4]
+	(No symbol) [0x00007FF6C25C6D4D]
+	(No symbol) [0x00007FF6C25C6E1C]
+	(No symbol) [0x00007FF6C260CE37]
+	(No symbol) [0x00007FF6C25EABBF]
+	(No symbol) [0x00007FF6C260A224]
+	(No symbol) [0x00007FF6C25EA923]
+	(No symbol) [0x00007FF6C25B8FEC]
+	(No symbol) [0x00007FF6C25B9C21]
+	GetHandleVerifier [0x00007FF6C2A441FD+3217949]
+	GetHandleVerifier [0x00007FF6C2A86197+3488183]
+	GetHandleVerifier [0x00007FF6C2A7F11F+3459391]
+	GetHandleVerifier [0x00007FF6C27FB926+823622]
+	(No symbol) [0x00007FF6C26C5FFF]
+	(No symbol) [0x00007FF6C26C0F24]
+	(No symbol) [0x00007FF6C26C10B2]
+	(No symbol) [0x00007FF6C26B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+]]></system-out>
+	</testcase>
+	<testcase classname="Login" name="test_invalid_email_password" time="31.174" timestamp="2024-05-10T08:51:58" file="TestCase\xml\login_xml.py" line="91">
+		<failure type="AssertionError" message="An error occurred during Login."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 28, in check_registration
+    userid = self.driver.find_element(By.NAME, "username")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="username"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C2741562+60802]
+	(No symbol) [0x00007FF6C26BAC62]
+	(No symbol) [0x00007FF6C2577CE4]
+	(No symbol) [0x00007FF6C25C6D4D]
+	(No symbol) [0x00007FF6C25C6E1C]
+	(No symbol) [0x00007FF6C260CE37]
+	(No symbol) [0x00007FF6C25EABBF]
+	(No symbol) [0x00007FF6C260A224]
+	(No symbol) [0x00007FF6C25EA923]
+	(No symbol) [0x00007FF6C25B8FEC]
+	(No symbol) [0x00007FF6C25B9C21]
+	GetHandleVerifier [0x00007FF6C2A441FD+3217949]
+	GetHandleVerifier [0x00007FF6C2A86197+3488183]
+	GetHandleVerifier [0x00007FF6C2A7F11F+3459391]
+	GetHandleVerifier [0x00007FF6C27FB926+823622]
+	(No symbol) [0x00007FF6C26C5FFF]
+	(No symbol) [0x00007FF6C26C0F24]
+	(No symbol) [0x00007FF6C26C10B2]
+	(No symbol) [0x00007FF6C26B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 95, in test_invalid_email_password
+    result = self.check_registration(user, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\login_xml.py", line 48, in check_registration
+    self.fail("An error occurred during Login.")
+AssertionError: An error occurred during Login.
+]]></failure>
+		<system-out><![CDATA[TC_07 Login failed With correct email address and incorrect password
+Error: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="username"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C2741562+60802]
+	(No symbol) [0x00007FF6C26BAC62]
+	(No symbol) [0x00007FF6C2577CE4]
+	(No symbol) [0x00007FF6C25C6D4D]
+	(No symbol) [0x00007FF6C25C6E1C]
+	(No symbol) [0x00007FF6C260CE37]
+	(No symbol) [0x00007FF6C25EABBF]
+	(No symbol) [0x00007FF6C260A224]
+	(No symbol) [0x00007FF6C25EA923]
+	(No symbol) [0x00007FF6C25B8FEC]
+	(No symbol) [0x00007FF6C25B9C21]
+	GetHandleVerifier [0x00007FF6C2A441FD+3217949]
+	GetHandleVerifier [0x00007FF6C2A86197+3488183]
+	GetHandleVerifier [0x00007FF6C2A7F11F+3459391]
+	GetHandleVerifier [0x00007FF6C27FB926+823622]
+	(No symbol) [0x00007FF6C26C5FFF]
+	(No symbol) [0x00007FF6C26C0F24]
+	(No symbol) [0x00007FF6C26C10B2]
+	(No symbol) [0x00007FF6C26B1904]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+]]></system-out>
+	</testcase>
+</testsuite>

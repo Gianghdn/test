@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Register-20240508144822" tests="5" file=".py" time="143.521" timestamp="2024-05-08T14:50:54" failures="4" errors="0" skipped="0">
+	<testcase classname="Register" name="test_Successful_registration_correct" time="6.188" timestamp="2024-05-08T14:50:23" file="TestCase\xml\register_xml.py" line="50">
+		<system-out><![CDATA[TC_01 Successful registration With the correct email address and password
+Test is passed for login: ('Minh29072013@gmail.com', 'Giangdinh%456hg')
+]]></system-out>
+	</testcase>
+	<testcase classname="Register" name="test_Failed_empty" time="35.572" timestamp="2024-05-08T14:49:06" file="TestCase\xml\register_xml.py" line="57">
+		<failure type="AssertionError" message="An error occurred during Registration."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 41, in check_registration
+    self.fail("Registration failed.")
+AssertionError: Registration failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 61, in test_Failed_empty
+    result = self.check_registration(email, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 46, in check_registration
+    self.fail("An error occurred during Registration.")
+AssertionError: An error occurred during Registration.
+]]></failure>
+		<system-out><![CDATA[TC_02 Registration failed With  empty email address and empty password
+Test is failed for login: ('', '')
+Error: Registration failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Register" name="test_Failed_invalid_email" time="35.491" timestamp="2024-05-08T14:49:41" file="TestCase\xml\register_xml.py" line="64">
+		<failure type="AssertionError" message="An error occurred during Registration."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 41, in check_registration
+    self.fail("Registration failed.")
+AssertionError: Registration failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 68, in test_Failed_invalid_email
+    result = self.check_registration(email, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 46, in check_registration
+    self.fail("An error occurred during Registration.")
+AssertionError: An error occurred during Registration.
+]]></failure>
+		<system-out><![CDATA[TC_03 Registration failed With an improperly formatted Email address (invalid Email)
+Test is failed for login: ('mngr550', 'Giangdinh%456hg')
+Error: Registration failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Register" name="test_Failed_weak_password" time="35.300" timestamp="2024-05-08T14:50:17" file="TestCase\xml\register_xml.py" line="71">
+		<failure type="AssertionError" message="An error occurred during Registration."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 41, in check_registration
+    self.fail("Registration failed.")
+AssertionError: Registration failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 75, in test_Failed_weak_password
+    result = self.check_registration(email, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 46, in check_registration
+    self.fail("An error occurred during Registration.")
+AssertionError: An error occurred during Registration.
+]]></failure>
+		<system-out><![CDATA[TC_04 Registration failed With a weak password
+Test is failed for login: ('Cung082021@gmail.com', 'Evyy')
+Error: Registration failed.
+]]></system-out>
+	</testcase>
+	<testcase classname="Register" name="test_invalid_email_password" time="30.971" timestamp="2024-05-08T14:50:54" file="TestCase\xml\register_xml.py" line="77">
+		<failure type="AssertionError" message="An error occurred during Registration."><![CDATA[Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 27, in check_registration
+    emailid = self.driver.find_element(By.NAME, "email")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="email"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF714A21572+60802]
+	(No symbol) [0x00007FF71499AC72]
+	(No symbol) [0x00007FF714857CE4]
+	(No symbol) [0x00007FF7148A6D4D]
+	(No symbol) [0x00007FF7148A6E1C]
+	(No symbol) [0x00007FF7148ECE37]
+	(No symbol) [0x00007FF7148CABBF]
+	(No symbol) [0x00007FF7148EA224]
+	(No symbol) [0x00007FF7148CA923]
+	(No symbol) [0x00007FF714898FEC]
+	(No symbol) [0x00007FF714899C21]
+	GetHandleVerifier [0x00007FF714D2420D+3217949]
+	GetHandleVerifier [0x00007FF714D661A7+3488183]
+	GetHandleVerifier [0x00007FF714D5F12F+3459391]
+	GetHandleVerifier [0x00007FF714ADB936+823622]
+	(No symbol) [0x00007FF7149A600F]
+	(No symbol) [0x00007FF7149A0F34]
+	(No symbol) [0x00007FF7149A10C2]
+	(No symbol) [0x00007FF714991914]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 81, in test_invalid_email_password
+    result = self.check_registration(email, password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Chuyende\TestCase\xml\register_xml.py", line 46, in check_registration
+    self.fail("An error occurred during Registration.")
+AssertionError: An error occurred during Registration.
+]]></failure>
+		<system-out><![CDATA[TC_05 Registration failed With invalid email and weak password
+Error: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="email"]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF714A21572+60802]
+	(No symbol) [0x00007FF71499AC72]
+	(No symbol) [0x00007FF714857CE4]
+	(No symbol) [0x00007FF7148A6D4D]
+	(No symbol) [0x00007FF7148A6E1C]
+	(No symbol) [0x00007FF7148ECE37]
+	(No symbol) [0x00007FF7148CABBF]
+	(No symbol) [0x00007FF7148EA224]
+	(No symbol) [0x00007FF7148CA923]
+	(No symbol) [0x00007FF714898FEC]
+	(No symbol) [0x00007FF714899C21]
+	GetHandleVerifier [0x00007FF714D2420D+3217949]
+	GetHandleVerifier [0x00007FF714D661A7+3488183]
+	GetHandleVerifier [0x00007FF714D5F12F+3459391]
+	GetHandleVerifier [0x00007FF714ADB936+823622]
+	(No symbol) [0x00007FF7149A600F]
+	(No symbol) [0x00007FF7149A0F34]
+	(No symbol) [0x00007FF7149A10C2]
+	(No symbol) [0x00007FF714991914]
+	BaseThreadInitThunk [0x00007FFD4E7C7344+20]
+	RtlUserThreadStart [0x00007FFD4F9A26B1+33]
+
+]]></system-out>
+	</testcase>
+</testsuite>
